@@ -5,24 +5,27 @@ from tkinter import ttk, Canvas
 
 master = Tk()
 master.title("Laboratorio remoto- LFN USB")
-master.geometry('1000x1000')
+master.geometry('600x600')
 
-top_frame = Frame(master, bg='white', width = 1000, height=300, padx=10, pady=10)
-top_frame.pack(side= TOP, fill=X)
+top_frame = Frame(master, bg='white', width = 300, height=600, padx=10, pady=10)
+#top_frame.grid(column=0, row=0)
+top_frame.pack(side= TOP, fill=BOTH)
 lbl = Label(top_frame, text="Laboratorio remoto - Espectrometría gamma", font=("Times New Roman", 20),bg='white')
 lbl.pack(side=TOP, padx=10, pady=10)
-left_frame = Frame(master, bg='white', width = 250,padx=10, pady=10)
-left_frame.pack(side= LEFT, fill=Y)
-right_frame = Frame(master, bg='white', width = 250,padx=10, pady=10)
-right_frame.pack(side= RIGHT, fill=Y)
-center_frame=Frame(master, bg='white', width=500, height=1000)
-center_frame.pack(side=TOP, fill=X)
+left_frame = Frame(master, bg='white', width = 300)
+#left_frame.grid(column=0, row=5)
+left_frame.pack(side= LEFT, fill=BOTH)
+right_frame = Frame(master, bg='white', width = 300)
+#right_frame.grid(column=10, row=5)
+right_frame.pack(side= RIGHT, fill=BOTH)
+#center_frame=Frame(master, bg='white', width=500, height=1000)
+#center_frame.pack(side=TOP, fill=X)
 
 #Para probar que los indices de los obstáculos sean los correctos
 def cambiar_obstaculo():
     demoscope3.move_noria(obstaculo.get())
 def def_distancia():
-	print(distancia.get())
+	demoscope3.move_Zahlrohr_sharp(distancia.get())
 #Lista de obstáculos de la noria
 obstaculo = IntVar()
 lbl_obs=Label(left_frame, text="Seleccione el atenuador que desea\n interponer entre la muestra y el detector",
@@ -52,7 +55,7 @@ btn.grid(padx=2, pady=2, column=0, row=12)
 lbl_distancia=Label(left_frame, text="Defina la distancia en cm\nentre el detector y la muestra",
 			font=("Times New Roman", 12),bg='white')
 lbl_distancia.grid(column=0, row=15, pady=20)
-distancia = Spinbox(left_frame, from_=8, to=28, width=5)
+distancia = Spinbox(left_frame, from_=0, to=5, width=5)
 distancia.grid(pady=10,column=0,row=20)
 #lbl_cm=Label(left_frame, text="cm",font=("Times New Roman", 12),bg='white')
 #lbl_cm.grid(column=1,row=20)
@@ -101,7 +104,7 @@ buttons = []
 for index in range(Nbuttons): 
     n=button_names[index]
 
-    button = Button(right_frame, bg="White", text=n, relief=GROOVE, command=lambda index=index, n=n: buttonfunction(index))
+    button = Button(right_frame, bg="White", text=n, relief=GROOVE, command=lambda index=index, n=n: buttonfunction(index),font=("Times New Roman", 12))
 
     # Add the button to the window
     button.grid(padx=2, pady=2, row=index, column=0)
