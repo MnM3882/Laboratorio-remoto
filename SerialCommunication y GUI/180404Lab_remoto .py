@@ -88,7 +88,7 @@ def buttonfunction(index):
 	if index == 0:
 		demoscope3.scope()
 	elif index == 1:
-		demoscope3.storedata(60)
+		demoscope3.storedata(300)
 	elif index == 2:
 		demoscope3.plotsignal()
 	elif index == 3:
