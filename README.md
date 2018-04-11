@@ -1,4 +1,3 @@
-
 # Laboratorio remoto
 Se desea realizar el montaje de dos experimentos relacionados con radiación gamma que serán monitoreados y controlados de forma remota.
 
@@ -8,8 +7,7 @@ Se desea realizar el montaje de dos experimentos relacionados con radiación gam
     
 Se determina la relación entre la intensidad de la radiación gamma y la distancia que separa al detector de la muestra radiactiva. 
 
-El detector que se utilizará es un detector de cámara de gas de tipo Geiger-Müller, este detector determina tasa de dosis, esta variable es proporcional a la intensidad de la radiación. 
-
+El detector que se utilizará es un detector de cámara de gas de tipo Geiger-Müller, este detector determina tasa de dosis y esta variable es proporcional a la intensidad de la radiación. 
 
 El usuario verá en pantalla la imagen en tiempo real del experimento, el valor del voltaje aplicado al detector, la distancia entre la muestra y el detector, la ventana temporal en la que se llevará a cabo la medida y la intensidad registrada. Por otro lado, el estudiante fijará la distancia detector-muestra. Al finalizar la experiencia, los datos serán almacenados para que el usuario pueda realizar el análisis que desee.
 
@@ -19,8 +17,7 @@ Se observa y caracteriza la atenuación de la radiación debido a su paso a trav
 
 Manteniendo la distancia detector-muestra fija, el usuario interpone en este espacio láminas de dos materiales diferentes (aluminio y plomo) y selecciona el espesor de la lámina utilizada. En este caso, se estudia la relación existente entre el tipo de material y el espesor de este, con la intensidad de la radiación. 
 
-
-Nuevamente, el usuario verá en pantalla la imagen en tiempo real del experimento, el valor del voltaje aplicado al detector, la distancia entre la muestra y el detector, el tipo de material de la lámina que se está usando como obstáculo y el espesor del mismo, la ventana temporal en la que se llevará a cabo la medida y la intensidad registrada. Mientras tanto, el estudiante fijará la distancia detector-muestra, el material de la lámina obstáculo y su espesor. Una vez culminado el tiempo de medida, los datos serán almacenados para que el usuario pueda realizar el análisis que desee.
+Nuevamente, el usuario verá en pantalla la imagen en tiempo real del experimento, la distancia entre la muestra y el detector, el tipo de material de la lámina que se está usando como obstáculo y el espesor del mismo, la ventana temporal en la que se llevará a cabo la medida y la intensidad registrada. Mientras tanto, el estudiante fijará la distancia detector-muestra, el material de la lámina obstáculo y su espesor. Una vez culminado el tiempo de medida, los datos serán almacenados para que el usuario pueda realizar el análisis que desee.
 
 ### Desarrollo del proyecto
 - **Tarjeta de desarrollo DemoQE128**
