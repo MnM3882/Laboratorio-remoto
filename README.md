@@ -1,3 +1,4 @@
+# Laboratorio remoto
 Se desea realizar el montaje de dos experimentos relacionados con radiación gamma que serán monitoreados y controlados de forma remota.
 
 <p> <img src="https://github.com/MnM3882/Laboratorio-remoto/blob/master/Wiki/imagenes_wiki/Exp9.jpg" alt="Imagen montaje"  height="400" width = "800"> 
