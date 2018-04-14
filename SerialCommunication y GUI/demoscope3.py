@@ -189,8 +189,8 @@ def storedata(adqtime):
 					bi = (((b1i & 0x1F) << 7) + (b2i & 0x7F)) *5/4095
 					bj = (((b3i & 0x1F) << 7) + (b4i & 0x7F))#/819
 
-                    # Ignorar las cuatro primeras adquisiciones
-                    # Para garantizar que la trama este sincronizada
+					# Ignorar las cuatro primeras adquisiciones
+					# Para garantizar que la trama este sincronizada
 					if(security<4):
 						pass
 					else:
@@ -221,7 +221,7 @@ def storedata(adqtime):
 
 				security = security+1;
 
-        # Cerrar el puerto al finalizar la adquisicion
+		# Cerrar el puerto al finalizar la adquisicion
 		ser.close()
 		os.system('clear')
 
