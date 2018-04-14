@@ -207,16 +207,13 @@ def storedata(adqtime):
 					bi = (((b1i & 0x1F) << 7) + (b2i & 0x7F)) *5/4095
 					bj = (((b3i & 0x1F) << 7) + (b4i & 0x7F))#/819
                     
-                    if(security<4):
-						pass
-					else:
-                        fx.write("%f\n"%bi)
-                        fy.write("%f\n"%bj)
+                    			fx.write("%f\n"%bi)
+                    			fy.write("%f\n"%bj)
 					
-                        fd1.write("%d\n"%d1)
-                        fd2.write("%d\n"%d2)
+                    # fd1.write("%d\n"%d1)
+                    # fd2.write("%d\n"%d2)
 
-                        fe.write("Error en la posicion %d"%i)
+			                fe.write("Error en la posicion %d"%i)
 					ser.reset_input_buffer()
 
 				security = security+1;
