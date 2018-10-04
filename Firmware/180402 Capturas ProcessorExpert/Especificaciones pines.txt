@@ -1,0 +1,23 @@
+Comunicación serial o dos puertos para hacer TTL (uno entrada y uno de salida)
+Timer interrupt
+External Interrupt
+ACD 1 Channel
+
+Cada 1ms
+	Medición y envío
+Cada 50ms
+	Movimineto de carrito
+Cada 75ms
+	Movimiento de noria
+
+Geiger
+	1 CH ADC
+	1 IN digital Bit con external interrupt (detector de pulsos)
+Noria
+	Motor (4 OUT digital bit)
+	1 IN digital Bit con external interrupt (fototransistor)
+Carrito
+	Motor (4 OUT digital bit)
+	2 IN digital Bit (final de carrera)
+
+	
