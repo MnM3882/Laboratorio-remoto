@@ -86,11 +86,11 @@ def scope():
 			if b1i >= 128:
 			
                 # Procesar la trama recibida
-				d1 = (b1i & 0x20) >> 5
-				d2 = (b3i & 0x20) >> 5
+				d1 = (b1i & 0x20) >> 5	#	0x20=0010 0000
+				d2 = (b3i & 0x20) >> 5	
 
-				bi = (((b1i & 0x1F) << 7) + (b2i & 0x7F)) *5/4095
-				bj = (((b3i & 0x1F) << 7) + (b4i & 0x7F))#/819
+				bi = (((b1i & 0x1F) << 7) + (b2i & 0x7F)) *5/4095	#	0x1F=0001 1111
+				bj = (((b3i & 0x1F) << 7) + (b4i & 0x7F))#/819		#	0x7F=0111 1111
 
                 # Actualizar arreglos
 				x = np.delete(x,0)

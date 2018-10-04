@@ -142,8 +142,8 @@ void main(void)
 
   	    			npulsos = 0;
   	    			
-  	    			dTrama[0] = (iADC1.u8[0] & 0xF8) >> 3;
-  	    			dTrama[1] = (iADC1.u8[0] & 0x07) << 4;
+  	    			dTrama[0] = (iADC1.u8[0] & 0xF8) >> 3;	// 0xF8=1111 1000
+  	    			dTrama[1] = (iADC1.u8[0] & 0x07) << 4;	//0x07=0000 0111
   	    			dTrama[1] += iADC1.u8[1] >> 4;
   	    			
   					dTrama[2] = (iADC2.u8[0] & 0xF8) >> 3;
@@ -153,17 +153,17 @@ void main(void)
   	    			
   	    			if(d2)
   	    			{
-  	    				dTrama[0] += 0x20;
+  	    				dTrama[0] += 0x20;	//0x20=0010 0000
   	    			}
   	    			
   	    			if(d3)
   	    			{
-  	    				dTrama[2] += 0x20;
+  	    				dTrama[2] += 0x20;	//0x20=0010 0000
   	    			}
   	    			
   					
   	    			
-  	    			dTrama[0] += 0x80;
+  	    			dTrama[0] += 0x80;	////0x80=1000 0000
   	    			CodError = AS1_SendBlock(dTrama,4,&Enviados); //El arreglo con la medición está en iADC.u8 (notar que es un apuntador)
   	    			estado = ESPERAR;
   	    			
