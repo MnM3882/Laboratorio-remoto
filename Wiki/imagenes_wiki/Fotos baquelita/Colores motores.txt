@@ -1,0 +1,15 @@
+Motor noria
+
+Rojo		-> 2
+Negro		-> Vcc
+Rojo/Blanco	-> 4
+Verde		-> 3
+Blanco		-> Vcc
+Verde/blanco	-> 1
+
+Verde-Blanco
+Negro-Marron-> Vcc
+Amarillo-Amarillo
+Rojo-rosa
+Blanco-azul->Vcc
+Azul-naranja
