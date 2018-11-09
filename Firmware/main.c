@@ -58,7 +58,7 @@ unsigned int npulsos=0; //Contador de pulsos que llegan desde el detector
 unsigned int light=0;
 
 unsigned char CodError;
-unsigned int Enviados = 4;		// Esta variable no aporta nada m·s sino el n˙mero de elementos del arreglo a enviar.
+unsigned int Enviados = 4;		// Esta variable no aporta nada m√°s sino el n√∫mero de elementos del arreglo a enviar.
 
 typedef union{
 unsigned char u8[2];
@@ -66,7 +66,7 @@ unsigned int u16;
 }AMPLITUD;
 
 volatile AMPLITUD iADC1, iADC2;
-volatile bool d1=0, d2=1, d3=1, m1VB=0, m1R=0, m1V=0, m1RB=0, m2VB=0, m2R=0, m2V=0, m2RB=0;
+volatile bool d1=0, d2=1, d3=1, m1VB=0, m1R=0, m1V=0, m1RB=0, m2VB=0, m2R=0, m2V=0, m2RB=0;	//d2 eOptico d3 eMecanico d1 LED	
 unsigned char dTrama[4]={0x00,0x00,0x00,0x00};
 unsigned int i=0, pasos=4096, j=0, antirebote=0;
 unsigned char modo = ENVIAR;
@@ -142,8 +142,8 @@ void main(void)
 
   	    			npulsos = 0;
   	    			
-  	    			dTrama[0] = (iADC1.u8[0] & 0xF8) >> 3;	// 0xF8=1111 1000
-  	    			dTrama[1] = (iADC1.u8[0] & 0x07) << 4;	//0x07=0000 0111
+  	    			dTrama[0] = (iADC1.u8[0] & 0xF8) >> 3;	//	0xF8=1111 1000
+  	    			dTrama[1] = (iADC1.u8[0] & 0x07) << 4;	//	0x07=0000 0111
   	    			dTrama[1] += iADC1.u8[1] >> 4;
   	    			
   					dTrama[2] = (iADC2.u8[0] & 0xF8) >> 3;
@@ -163,8 +163,8 @@ void main(void)
   	    			
   					
   	    			
-  	    			dTrama[0] += 0x80;	////0x80=1000 0000
-  	    			CodError = AS1_SendBlock(dTrama,4,&Enviados); //El arreglo con la mediciÛn est· en iADC.u8 (notar que es un apuntador)
+  	    			dTrama[0] += 0x80;	//0x80=1000 0000
+  	    			CodError = AS1_SendBlock(dTrama,4,&Enviados); //El arreglo con la medici√≥n est√° en iADC.u8 (notar que es un apuntador)
   	    			estado = ESPERAR;
   	    			
   	    			break;

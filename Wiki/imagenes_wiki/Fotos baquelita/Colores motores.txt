@@ -7,9 +7,11 @@ Verde		-> 3
 Blanco		-> Vcc
 Verde/blanco	-> 1
 
-Verde-Blanco
-Negro-Marron-> Vcc
-Amarillo-Amarillo
-Rojo-rosa
-Blanco-azul->Vcc
-Azul-naranja
+Motor riel
+
+Verde-Blanco		->3
+Negro-Marron		-> Vcc
+Amarillo-Amarillo	->2
+Rojo-rosa		->4
+Blanco-azul		->Vcc
+Azul-naranja		->1
